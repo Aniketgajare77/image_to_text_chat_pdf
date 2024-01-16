@@ -24,6 +24,9 @@ from nltk.corpus import stopwords
 # Download the stop words dataset
 nltk.download('stopwords')
 
+headers={
+    "authorization": st.secrets["OPENAI_API_KEY"]
+}
 
 
 def save_uploaded_file(uploaded_file):
@@ -151,7 +154,7 @@ def handle_userinput(user_question):
 
 def main():
     
-    load_dotenv()
+    #load_dotenv()
     #OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
     st.set_page_config(page_title="Chat with multiple PDFs",
                        page_icon=":books:")
